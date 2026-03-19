@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    Email ID: <input type="text" id="email" required><br><br>
+    Password: <input type="password" id="pass" required>
+    <input type="button" value="Login" id="btn">
+<script>
+    document.getElementById("btn").addEventListener("click", function(){
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("pass").value;
+        
+        const pattern = /\w+@\w+\.\w+/;
+
+        if(!pattern.test(email)) {
+        	alert("Enter a valid email");
+        }else{
+        	console.log("correct");
+        }
+        if(pass.trim() === "") {
+            alert("Password is required");
+            return;
+        }
+	document.write("Login successful")
+    });
+</script> 
+</body>
+</html>
